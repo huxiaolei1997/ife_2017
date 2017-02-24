@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+    input{
+		display: none;
+	} 
+	label:hover{
+		cursor:pointer;
+	}
+    /*以下是用伪类实现的部分*/
+	#form1 input[type="checkbox"] + label::before{
+		content: '\a0';
+		display: inline-block;
+		width: 0.8em;
+		height: 0.8em;
+		margin-right:0.2em;
+		border-right: 0.3em;
+		background:#FFFFFF;
+		border:1px solid #D9D9D9;
+		text-indent: 0.1em;
+		line-height: 0.8em;
+	}
+	#form1 input[type="checkbox"]:checked + label::before{
+		content: '✔';
+		background: #fff;
+		border:1px solid #D73D32;
+		color: #D73E33;
+	}
+	#form1 input[type="radio"] + label::before{
+		content: '\a0';
+		display: inline-block;
+		width: 0.8em;
+		height: 0.8em;
+		margin-right:0.2em;
+		border-right: 0.3em;
+		background:#FFFFFF;
+		border:1px solid #D9D9D9;
+		text-indent: 0.15em;
+		line-height: 0.8em;
+		border-radius: 50%;
+	}
+	#form1 input[type="radio"]:checked + label::before{
+		content: '•';
+		background: #fff;
+		border:1px solid #D73D32;
+		color: #D73E33;
+	}
+	/*以下是用背景图实现的css部分*/
+    #form2 input[type="checkbox"] + label::before{
+		content: '\a0';
+		display: inline-block;
+		width: 19px;
+		height: 19px;
+		margin-right:0.3em;
+		border-right: 0.3em;
+		background:url(3.png);
+		text-indent: 0.1em;
+		line-height: 19px;
+	}
+	 #form2 input[type="checkbox"]:checked + label::before{
+		background:url(4.png);
+	}
+	 #form2 input[type="radio"] + label::before{
+		content: '\a0';
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		margin-right:0.2em;
+		border-right: 0.3em;
+		background:url(2.png);
+		text-indent: 0.15em;
+		line-height: 1em;
+	}
+	#form2 input[type="radio"]:checked + label::before{
+		background: url(1.png);
+	}
+	#box{
+	    width: 300px;
+	    height: 300px;
+	    margin:0 auto;
+	}
+ 	</style>
+</head>
+<body>
+<div id="box">
+	<form action="" id="form1">	
+	<input type="radio" id="radio-1" name="radio1"><label for="radio-1">radio1</label>&nbsp;
+	<input type="radio" id="radio-2" name="radio1"><label for="radio-2">radio2</label>
+	</br>
+	</br>
+	<input type="checkbox" id="checkbox-1"><label for="checkbox-1">choose1</label>
+	<input type="checkbox" id="checkbox-2"><label for="checkbox-2">choose2</label>
+	</form>
+	</br>
+	</br>
+	<form action="" id="form2">	
+    <input type="radio" id="radio-3" name="radio3">&nbsp;<label for="radio-3">radio1</label>&nbsp;
+	<input type="radio" id="radio-4" name="radio3"><label for="radio-4">radio2</label>
+	</br>
+	</br>
+	<input type="checkbox" id="checkbox-3"><label for="checkbox-3">choose1</label>
+	<input type="checkbox" id="checkbox-4"><label for="checkbox-4">choose2</label>
+	</form>
+</div>
+</body>
+</html>
