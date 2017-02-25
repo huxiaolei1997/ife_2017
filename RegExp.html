@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#mob_number{
+			width: 500px;
+			height: 500px;
+			margin:0 auto;
+		}
+	</style>
+	<script type="text/javascript">
+ function judge() {
+			var cm = /134[0-8]\d{7}|13[5-9]\d{8}|15[012789]\d{8}|18[23478]\d{8}|147\d{8}|178\d{8}/g;
+			var cu = /13[0-2]\d{8}|15[256]\d{8}|18[56]\d{8}/g;
+			var ct = /133\d{8}|1349\d{7}|153\d{8}|18[09]\d{8}/g;
+			var vir = /170\d{8}/g;
+		    var number = document.getElementById("Number").value;
+		    if(number.length!=11)
+		  {
+		  	  	      document.getElementsByTagName('p')[0].innerHTML="false，" + "此手机号码格式错误";
+		  }
+		    else if(number.match(cm))
+		    {
+		    	      document.getElementsByTagName('p')[0].innerHTML="true，" + number + "是中国移动的手机号码";
+		    }
+
+		    else if(number.match(cu)){
+		    	  	  document.getElementsByTagName('p')[0].innerHTML="true，" + number + "是中国联通的手机号码";
+		    }
+		    else if(number.match(ct)){
+		    	  	  document.getElementsByTagName('p')[0].innerHTML="true，" + number + "是中国电信的手机号码";
+		    }
+		    else if(number.match(vir)){
+		    	  	  document.getElementsByTagName('p')[0].innerHTML="true，" + number + "是虚拟运营商的手机号码";
+		    }
+		    else{
+                      document.getElementsByTagName('p')[0].innerHTML="false，此手机号码不存在";
+	}
+		}
+		function judge2(){
+			var reg1 =/\b(\w+)\b\s+\1\b/;
+		    var str = document.getElementById("word").value;
+		    if(reg1.test(str)){
+		    	      document.getElementsByTagName('p')[1].innerHTML = "true";
+		    }
+		    else{
+	                  document.getElementsByTagName('p')[1].innerHTML = "false";
+		    }
+		    // var arr = str.split(reg1);
+		    // var arr2 = str.split(reg1);
+		  // document.getElementsByTagName('p')[1].innerHTML = arr[2];
+   //        for (var i = 0;i<arr.length;i++)
+   //        {
+   //        	for(var j = 1; j<arr2.length;j++)
+   //        {
+
+   //        		if(arr2[j]==arr[i])
+   //        {
+
+   //        		  document.getElementsByTagName('p')[1].innerHTML = "true";
+   //        		  continue;
+   //        }
+
+			// else{
+			// 	 document.getElementsByTagName('p')[1].innerHTML = "false";
+			// }
+   //        }
+          
+   //        }
+}
+	</script>
+</head>
+<body>
+<form>
+<div id="mob_number">
+	<input type="text"  id="Number"/>
+	<input type="button" name="btn" onclick="judge()" value="judge"/>
+	<p></p>
+	</br>
+	<input type="text"  id="word"/>
+	<input type="button" name="btn" onclick="judge2()" value="judge2"/>
+	<p></p>
+</div>
+</form>
+</body>
+</html>
