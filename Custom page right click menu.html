@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>document</title>
+<style type="text/css">
+ *{
+	margin:0;padding:0;font-family: "微软雅黑";
+    font-weight: 300;
+  }
+#rightclick{
+	margin:0 auto;
+	width:300px;
+	height: 100px;
+	border:1px solid #D0D0D0;
+	line-height: 100px;
+	text-align: center;
+	border-radius: 6px;
+}
+#myDIV{position:absolute;width:150px;visibility:hidden;border:1px solid #D0D0D0; background-color: #fff; border-radius: 3px;   }
+#myDIV li{list-style:none;text-indent:1em;padding-right: 30px;padding-top: 5px;padding-bottom: 5px;cursor: pointer;}
+</style>
+</head>
+<body>
+<div id="rightclick">right click to see the menu items</div>
+<div id="myDIV" contextmenu="mymenu">
+<ul id="mymenu">
+	<li onclick="alt()">Menu Item 1</li>
+	<li onclick="alt2()">Menu Item 2</li>
+</ul>
+</div>
+
+<p id="demo"></p>
+<script type="text/javascript">
+var cli = document.getElementById("rightclick");
+cli.oncontextmenu = function(e){
+ if(window.event) 
+ e = window.event;
+ var mymenu1 = document.getElementById("myDIV");
+ mymenu1.style.visibility = "visible";
+ mymenu1.style.left = e.clientX + 5 +"px";
+ mymenu1.style.top = e.clientY + 5 + "px";
+ return false;
+}
+document.onclick = function(){
+ var mymenu1 = document.getElementById("myDIV");
+ mymenu1.style.visibility = "hidden"; 
+}
+function alt(){
+	alert("Menu Item1");
+}
+function alt2(){
+	alert("Menu Item2");
+}
+</script>
+</body>
+</html>
