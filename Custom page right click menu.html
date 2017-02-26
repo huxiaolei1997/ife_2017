@@ -16,8 +16,11 @@
 	line-height: 100px;
 	text-align: center;
 	border-radius: 6px;
+/*	top: 50%;
+	left: 50%;
+	position: absolute;*/
 }
-#myDIV{position:absolute;width:150px;visibility:hidden;border:1px solid #D0D0D0; background-color: #fff; border-radius: 3px;   }
+#myDIV{position:absolute;width:150px;height:65px;visibility:hidden;border:1px solid #D0D0D0; background-color: #fff; border-radius: 3px;   }
 #myDIV li{list-style:none;text-indent:1em;padding-right: 30px;padding-top: 5px;padding-bottom: 5px;cursor: pointer;}
 </style>
 </head>
@@ -29,18 +32,29 @@
 	<li onclick="alt2()">Menu Item 2</li>
 </ul>
 </div>
-
-<p id="demo"></p>
 <script type="text/javascript">
 var cli = document.getElementById("rightclick");
 cli.oncontextmenu = function(e){
- if(window.event) 
- e = window.event;
+ // if(window.event) 
+ e =e|| window.event;
  var mymenu1 = document.getElementById("myDIV");
+// document.getElementsByTagName('p')[0].innerHTML=e.clientX; 
+// document.getElementsByTagName('p')[1].innerHTML=e.clientY;
+// document.getElementsByTagName('p')[2].innerHTML=window.innerHeight; 
+// document.getElementsByTagName('p')[3].innerHTML=window.innerWidth; 
+if((e.clientY+65)<=window.innerHeight&&(e.clientX+150)<=window.innerWidth)
+{
  mymenu1.style.visibility = "visible";
- mymenu1.style.left = e.clientX + 5 +"px";
- mymenu1.style.top = e.clientY + 5 + "px";
- return false;
+ mymenu1.style.left = e.clientX+"px";
+ mymenu1.style.top = e.clientY+"px";
+}
+else if((e.clientY+65)<=window.innerHeight&&(e.clientX+150)>=window.innerWidth)
+{
+ mymenu1.style.visibility = "visible";
+ mymenu1.style.left = e.clientX+ -150 +"px";
+ mymenu1.style.top = e.clientY+"px";
+}
+return false;
 }
 document.onclick = function(){
  var mymenu1 = document.getElementById("myDIV");
