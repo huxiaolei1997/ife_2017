@@ -10,10 +10,10 @@
   }
 #rightclick{
 	margin:0 auto;
-	width:300px;
-	height: 100px;
+	width:800px;
+	height: 600px;
 	border:1px solid #D0D0D0;
-	line-height: 100px;
+	line-height: 600px;
 	text-align: center;
 	border-radius: 6px;
 /*	top: 50%;
@@ -53,6 +53,12 @@ else if((e.clientY+65)<=window.innerHeight&&(e.clientX+150)>=window.innerWidth)
  mymenu1.style.visibility = "visible";
  mymenu1.style.left = e.clientX+ -150 +"px";
  mymenu1.style.top = e.clientY+"px";
+}
+else if((e.clientY+65)>=window.innerHeight&&(e.clientX+150)<=window.innerWidth)
+{
+ mymenu1.style.visibility = "visible";
+ mymenu1.style.left = e.clientX+ -150 +"px";
+ mymenu1.style.top = e.clientY+ -65 + "px";
 }
 return false;
 }
