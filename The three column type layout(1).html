@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>三种方法实现三栏式布局</title>
+	<style type="text/css">
+	/*这种方法三个div的顺序可以任意改变。此方法的优点在于：理解容易，上手简单，受内部元素影响而破坏布局的概率低，就是比较经得起折腾。
+    缺点在于：如果中间栏含有最小宽度限制，或是含有宽度的内部元素，当浏览器宽度小到一定程度的时候，会发生层重叠的情况。
+	*/
+			*{
+		margin:0;
+		padding: 0;
+		}
+
+		#main{
+			margin:0 200px;
+			background-color: red;
+	}
+		#left{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			background-color: blue;
+		    height: 100%;
+		}
+		#right{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;		position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+			background-color: green;
+			height: 100%;</div>
+	<div id="left"></div>
+	<div id="right"></div>
+</body>
+</html>
