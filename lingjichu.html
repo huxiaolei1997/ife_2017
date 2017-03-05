@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+	    margin:0 auto;
+	    padding: 0;
+	}
+		#header{
+			width: 100%;
+			height: 60px;
+			background-color: #333333;
+		}
+		#header ul li{
+			list-style: none;
+			display: inline-block;
+			float: right;
+			line-height: 60px;
+			width: 100px;
+            padding-left: 10px;
+            font-weight: bold;
+		}
+		img {
+			display: inline-block;
+			float: left;
+		}
+		.color1{
+         color: #FEFFED;
+		}
+		 #header ul{
+			list-style: none;
+			counter-reset: count;
+		}
+		 #header li:before{
+			content: "·";
+			color: black;
+		}
+		#box1,#box2,#box3,#box4,#box5{
+			width: 97%;
+			height: 900px;
+			margin: 0 auto;
+			margin-top: 30px;
+		/*	border: 1px solid red;*/
+			box-shadow: 2px 2px 2px #848484;
+			background-color: #fff;
+		}
+	body{
+			background-color: #DEDEDE;
+			font-family: "微软雅黑";
+
+		}
+		#box1 h1{
+			padding-top: 60px;
+		}
+		#box1 h1,#box1 h2,#box1 span,#box1 article{
+		margin-left: 30px;
+	/*	margin-top: 60px;*/
+	/*	display: block;*/
+		}
+		#box1 article{
+			line-height: 26px;
+		}
+		#box1 h2,#box1 span,#box3 h2,#box3 h3{
+			color:#7C7C7E;
+		}
+		#box1 article ul{
+			margin-left: 30px;
+		} 
+		#box1 article ul li {
+		 list-style-type: none;
+		} 
+		#box2 img{
+			width: 100px;
+			height: 100px;
+		}
+		#pics {
+			width: 160px;
+			height: 700px;
+			float: left;
+			padding-top:13px;
+			padding-left: 65px;
+	/*		border: 1px soid red;*/
+		}
+		#pics span{
+			display: block;
+			width: 120px;
+			height:20px;
+			line-height: 20px;
+		/*	border: 1px solid red;*/
+			text-align: center;
+			padding-top: 10px;
+		}
+		#pics div{
+			width: 120px;
+			height: 160px;
+			border:1px solid #CBCBCB;
+			margin-top: 10px;
+		}
+		#pics div img{
+		    padding-top: 11px;
+		 	padding-left: 10px;
+		}
+		#tupianwenzi{
+			display: block;
+			font-size: 30px;
+	     	padding-top:60px;
+			padding-left: 30px;
+		}
+		#footer{
+           width: 97%;
+           height: 100px;
+           background-color: #000;
+		}
+		#footer span{
+			display: block;	
+			line-height: 100px;
+		    color: white;
+		    text-align: center;
+		}
+
+		#Box3 {
+			margin-left: 60px;
+			padding-top: 60px;
+		}
+		#Box3 ol{
+	    margin-left: 60px;
+
+		}
+       table{
+       	border-collapse: collapse;
+       	width:90%;
+       	height: 180px;
+       }
+       thead:nth-child(1){
+       	background-color: #333333;
+       }
+       #cebianlan div{
+       	width: 3px;
+       	height: 37px;
+       	background-color: #ccc;
+       	display: inline-block;
+       }
+       #cebianlan{
+       padding-top: 36px;
+       float: left;
+       padding-left: 30px;
+       }
+       #biaoti{
+       padding-top: 41px;
+       padding-left: 41px;
+       font-weight: bold;
+       }
+	  #ziliao{
+	/*	display: table-cell;
+		vertical-align: middle;*/
+		padding-left: 35%;
+		}
+	  .yanse{
+		color: #8B9CAC;
+		}
+		textarea{
+			margin-left:130px;
+			margin-top: -19px;
+		}
+		.btn1{
+			width: 95%;
+			height:39px;
+			background:#3355D0;
+			color: white;
+			font-family: "微软雅黑";
+			font-size: 19px;
+			border-radius: 11px;
+			display: block;
+			margin:0 auto;
+		}
+	</style>
+
+
+
+</head>
+<body>
+	<div id="header">
+      <img src="5.png" alt="">
+	  <ul>
+		<li class="color2">&nbsp;&nbsp;导航链接四</li>
+        <li class="color1">&nbsp;&nbsp;导航链接三</li>
+	    <li class="color1">&nbsp;&nbsp;导航链接二</li>
+        <li class="color1">&nbsp;&nbsp;导航链接一</li>
+	   </ul></div>
+	<div id="container">
+	<div id="box1"><h1>文章一级标题</h1></br><h2>文章二级标题</h2></br><span>文章作者  文章发表时间</span></br></br><article><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了</br></p><p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了</br>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，</br></br>
+	</p><img src="6.png" alt="">
+	</br></br></br></br></br></br></br></br></br></br>
+	<ul>
+		<li>列表项目一</li>
+		<li>列表项目二</li>
+		<li>列表项目三</li>
+	</ul>
+	</article></div>
+	<div id="box2"><span id="tupianwenzi">图片</span>
+	<div id="pics">
+		<div><span>好看的图片</span><img src="6.png" alt=""></div>
+	    <div><span>好看的图片</span><img src="6.png" alt=""></div>
+		<div><span>好看的图片</span><img src="6.png" alt=""></div>
+		<div><span>好看的图片</span><img src="6.png" alt=""></div>
+        </div>
+    </div>
+	<div id="box3"><div id="Box3">
+		<h1>最后一篇文章一级标题</h1></br>
+		<h2>文章二级标题</h2></br>
+        <h3>文章作者 文章发表时间</h3>
+        </br>
+        <ol>
+        	<li>排名1</li>
+        	<li>排名2</li>
+        	<li>排名3</li>
+        </ol>
+        </br>
+        下面是一个表格，我这里给表格添加了一个border="1"好让你看出是一个表格，你们不用写html时候不需要加</br>
+	</div>
+	   <table border="1">
+        	<thead>
+        	<tr>
+        		<td>表头</td>
+                <td>表头</td>
+                <td>表头</td>
+        	</tr>
+        	</thead>
+        	<tbody>
+        	<tr>
+        		<td>表内容单元格</td>
+        		<td>表内容单元格</td>
+                <td><a href="#">操作</a></td>
+        	</tr>
+        	<tr>
+        		<td>表内容单元格</td>
+        		<td>表内容单元格</td>
+                <td><a href="#">操作</a></td>
+        	</tr>
+            <tr>
+        		<td>表内容单元格</td>
+        		<td>表内容单元格</td>
+                <td><a href="#">操作</a></td>
+        	</tr>
+        	<tr>
+                <td>表内容单元格</td>
+        		<td>表内容单元格</td>
+                <td><a href="#">操作</a></td>
+        	</tr>
+        	</tbody>
+        	<tfoot>
+        	 <tr>
+        	   <td>总计</td>
+               <td>1000</td>
+               <td></td>
+           	 </tr>
+        	</tfoot>
+        </table></div>
+	<div id="box4"></div>
+	<div id="box5">
+	<div id="cebianlan"><div></div></div>
+	<div id="biaoti">这里以后是一个侧栏，这是侧栏的标题</div>
+	<div id="ziliao">
+   <form action="">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入网址&nbsp;&nbsp;&nbsp;<input type="email" name="user_email"/></br></br><span class="yanse">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱地址请按要求格式输入</span>
+   </br>
+   </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入密码&nbsp;&nbsp;&nbsp;<input type="password" name="user_pwd"/></br>   </br>
+   请重复输入密码&nbsp;&nbsp;<input type="password" name="repeat_pwd"/></br></br><span class="yanse">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码请为6-16位英文数字</span></br></br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="man" checked="checked" />男
+  <input type="radio" name="sex" value="female"/>女</br>   </br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;城市&nbsp;&nbsp;&nbsp;<select name="fruit" size="1" id="cities" multiple="multiple"><option value="beijing">北京</option>option value="shanghai">上海</option>option value="guangzhou">广州</option></select>
+  </br></br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱好&nbsp;&nbsp;&nbsp;<input type="checkbox" name="hooby" value="hooby1">运动
+  <input type="checkbox" name="hooby" value="hooby2">艺术
+  <input type="checkbox" name="hooby" value="hooby3">科学
+   </form>
+     </br>  
+     </br>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人描述</p> <textarea name="iformation" id="infor" cols="30" rows="10">这是一个多行输入框，输入你的个人信息</textarea>
+	</div>
+	</br>
+   <form action="">
+   <input type="submit" name="btn" value="确认提交" class="btn1" />
+   </form>
+	</div>
+	</div>
+    <div id="footer"><span>版权所有&copy;</span></div>
+</body>
+</html>
