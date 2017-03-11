@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>使用HTML/CSS实现一个复杂页面</title>
+	<style type="text/css">
+	    *{
+		margin:0;
+		padding:0;
+	    }
+	    span{
+	    	display: inline-block;
+	    }
+/*	body{
+		min-width: 1200px;
+	}*/
+		#header{
+			width: 100%;
+			height: 60px;
+			background-color:#2189C0;
+			display: inline-block;
+			min-width: 1000px;
+		}
+		#header-img{
+			display: inline-block;
+			margin-left: 60px;
+			margin-top: 5px;
+		}
+		#container{
+			width: 1200px;
+			height: 2000px;
+		}
+		#sub{
+			float: right;
+			height: 30px;
+			width:450px;
+			background-color:#2189C0;
+			margin-top: 15px;
+			margin-right: 90px;
+			border:none;
+		}
+		#search img{
+			display: inline-block;
+			float: left;
+			margin-top: 5px;
+			margin-left: 7px;
+		}
+		#sign-in{
+			display: inline-block;
+			float:right;
+			margin-top: 3px;
+			margin-right: 30px;
+	        cursor: pointer;
+		}
+		#search{
+			display: inline-block;
+			width: 350px;
+			height: 30px;
+			background-color:white;
+			border-radius: 13px;
+		    cursor: pointer;
+		}
+		#left{
+			margin-top: -5px;
+			width: 260px;
+			height: 2000px;
+			background-color:#2B2E3D;
+			display: inline-block;
+			float: left;
+		}
+	    #right{
+	/*		margin-top: 25px;*/
+			width: 935px;
+			height: 1970px;
+			background-color:#EDEDED;
+			display: inline-block;
+			float: right;
+/*			min-width: 800px;*/
+		}
+		#left img{
+			width: 260px;
+		}
+		#select{
+			margin-top: 30px;
+			margin-left: 30px;
+			border:1px solid #DDDEE2;
+			width: 880px;
+			height: 100px;
+			background-color: #fff;
+			color: #CDCDCD;
+		}
+		#first select{  
+			width: 70px;
+			height: 25px;
+		}
+		#first{
+			margin-top: 15px;
+			margin-left: 40px;
+			display: inline-block;
+		}
+		#second{
+			width: 230px;
+			height: 60px;
+/*			background-color:red;*/
+/*          margin-left: 50px;*/
+/*			margin-top: 15px;*/
+            float: right;
+            margin-top: 15px;
+            margin-right:460px;
+            display: inline-block;
+		}
+		#second img{
+			display: inline-block;
+			float: right;
+		}
+		#second-1,#second,#second-2,select,span{
+			display: inline-block;
+		}
+		#second select{
+			width: 130px;
+			height: 25px;
+			margin-bottom: 5px;
+		}
+		#second img{
+			margin-top: -25px;
+			margin-right: 19px;
+			cursor: pointer;
+		}
+		#third{
+			width: 180px;
+			height: 31px;
+	/*		background-color: red;*/
+			float: right;
+			display: inline-block;
+			margin-right: 260px;
+			margin-top:-60px; 
+
+		}
+        #third span{
+	     	height: 30px;
+	     	line-height: 30px;
+	     	display: inline-block;
+     }
+        #third div{
+	     	width: 130px;
+	     	height:25px;
+	     	background-color:white;
+	     	float: right;
+	     	border:1px solid #CBCBCB;
+	     	line-height: 25px;
+	     	color:black;
+     }
+        #time{
+	     	width: 130px;
+	     	height: 30px;
+	/*     	background-color: red;*/
+	     	float: right;
+	     	margin-top: -60px;
+	     	margin-right: 110px;
+     }
+        #time select{
+	     	width: 60px;
+	     	height: 25px;
+	     	margin-left: 10px;
+     }
+        #time span,#time div{
+	     	display: inline-block;
+	        height: 30px;
+	        line-height: 30px;
+     }
+        #renshu span,#renshu div{
+	     	display: inline-block;
+	     	height: 30px;
+	     	line-height: 30px;
+
+     }
+        #renshu{
+	     	width: 150px;
+	     	height: 30px;
+	/*     	background-color: red;*/
+	     	float: right;
+	     	margin-right: 290px;
+	     	margin-top: -32px;
+	/*     	line-height: 30px;*/
+     }
+        #renshu select{
+	        width: 90px;
+	     	height: 25px;
+	     	margin-left: 10px;
+     }
+        #chengjiao span,#chengjiao div{
+	     	display: inline-block;
+	     	height: 30px;
+	     	line-height: 30px;
+
+     }
+        #chengjiao{
+	     	width: 200px;
+	     	height: 30px;
+	/*     	background-color: red;*/
+	     	float: right;
+	     	margin-right: 100px;
+	     	margin-top: -32px;
+	/*     	line-height: 30px;*/
+     }
+        #chengjiao select{
+	        width: 115px;
+	     	height: 25px;
+	     	margin-left: 10px;
+     }
+        #btn1{
+	     	width: 60px;
+	     	height: 30px;
+	     	background-color: #398AC1;
+	     	border-radius: 3px;
+	     	border:none;
+	     	color: white;
+	     	float: right;
+	     	margin-top: -45px;
+	     	margin-right: 30px;
+	     	cursor: pointer;
+     }
+        select{
+     	    border:1px solid #CBCBCB;
+     }
+        #con{
+	     	width: 880px;
+	     	height: 100px;
+	    /* 	background-color:red;*/
+	     	margin-top: 30px;
+	     	margin-left: 30px;
+	/*     	border:1px solid red;*/
+	     	position: relative;
+     }
+        .sma{
+	     	width: 105px;
+	     	height: 64px;
+	/*     	border:1px solid blue;*/
+	        display: inline-block;
+	        vertical-align: top;
+	/*        margin-left: 30px;*/
+     }
+        .img{
+	     	width: 29px;
+	     	height: 65px;
+	/*     	border:1px solid red;*/
+	     	display: inline-block;
+	     	cursor: pointer;
+	/*     	vertical-align: middle;*/
+     }
+        .chaxun{
+	     	width: 130px;
+	     	height: 65px;
+	/*     	border:1px solid red;*/
+	     	display: inline-block;
+	     	cursor: pointer;
+	/*     	margin-top: 17px;*/
+     }
+	    #smacon{
+			width: 880px;
+			height: 66px;
+		/*	border:1px solid blue;*/
+			margin-top: 15px;
+		}
+	    #small{
+			display: inline-block;
+			width: 105px;
+			height: 3px;
+			background-color: #4388C9;
+			float: left;
+		}
+	    .sma{
+			background-color: white;
+		}
+	    .sma span:nth-child(2){
+			font-size: 14px;
+		    margin:10px 0 0 25px;
+		}
+	    .sma span:nth-child(4){
+			font-size: 14px;
+		    margin:5px 0 0 23px;
+		    color: #AEAEAE;
+		}
+	    .sma span:nth-child(5){
+			font-size: 22px;
+		/*    margin:0 0 0 25px;*/
+		    color: #EB6601;
+		    margin-left: -3px;
+		}
+        #spa{
+        	display: inline-block;
+        	margin-top: 20px;
+        }
+        #suc{
+        	width: 880px;
+        	height: 100px;
+/*        	background-color:red;*/
+        	margin-top: 5px;
+        }
+        .suc1{
+        	width: 200px;
+        	height: 99px;
+       /*     border:1px solid blue;*/
+        	float: left;
+        	margin-right: 18px;
+        	position: relative;
+        	border:1px solid #D3D4D8;
+        	background-color: white;
+        	border-left: none;
+        }
+        .suc1 span:nth-child(1){
+        	display: inline-block;
+        	width: 3px;
+        	height: 99px;
+        	background-color:#43B29F;
+        }
+        .suc2 span:nth-child(1){
+        	display: inline-block;
+        	width: 3px;
+        	height: 99px;
+        	background-color:#398AC1;
+        }
+        .suc3 span:nth-child(1){
+        	display: inline-block;
+        	width: 3px;
+        	height: 99px;
+        	background-color:#CF4B36;
+        }
+        .suc4 span:nth-child(1){
+        	display: inline-block;
+        	width: 3px;
+        	height: 99px;
+        	background-color:#E1CD46;
+        }
+        .suc1 span:nth-child(4){
+        	display: inline-block;
+        	width: 70px;
+        	height:50px;
+        	background-color:#43B29F;
+        	float:right;
+        	margin-right: 20px;
+        	margin-top: 25px;
+        }
+        .suc1 span:nth-child(2){
+        	display: inline-block;
+        	margin-top: 25px;
+        	margin-left: 7px;
+        	vertical-align: top;
+        }
+        .suc1 span:nth-child(3){
+        	position: absolute;
+        	display: inline-block;
+            top: 55px;
+            right:146px;
+            color: #B7B7B7;
+            font-size: 14px;
+
+/*        	text-align: left;*/
+   /* 	margin-right: 30px;*/
+/*        	vertical-align:top;*/
+        /*	float: left;*/
+        }
+        .suc2 span:nth-child(4){
+        	display: inline-block;
+        	width: 70px;
+        	height:50px;
+        	background-color:#398AC1;
+        	float: right;
+        	margin-right: 20px;
+        	margin-top: 25px;
+        }
+        .suc3 span:nth-child(4){
+        	display: inline-block;
+        	width: 70px;
+        	height:50px;
+        	background-color:#CF4B36;
+        	float: right;
+        	margin-right: 20px;
+        	margin-top: 25px;
+        }
+        .suc4 span:nth-child(4){
+        	display: inline-block;
+        	width: 70px;
+        	height:50px;
+        	background-color:#E1CD46;
+        	float: right;
+        	margin-right: 20px;
+        	margin-top: 25px;
+        }
+        #xiangmu{
+        	width:880px;
+        	height: 400px;
+     /*       border:1px solid red;*/
+            margin-top: 30px;
+            display: inline-block;
+        }
+        #firp{
+        	width: 500px;
+        	height: 399px;
+        	border:1px solid #CFD0D4;
+        	display: inline-block;
+        	border-radius: 5px;
+        }
+        #secp{
+        	width:350px;
+        	height: 399px;
+        	border:1px solid #CFD0D4;
+        	float: right;
+            border-radius: 5px;
+        }
+        #firp2{
+        	width: 500px;
+        	height: 60px;
+        	background-color: #F4F5F7;
+        	border-radius: 5px;
+        }
+        #firp2 span{
+        	color: #AFAFAF;
+            display: inline-block;
+            margin-top: 15px;
+            margin-left: 25px;
+        }
+        #firp3{
+        	width: 500px;
+        	height:338px;
+        	background-color: white;
+        }
+        #firp3 ul li{
+        	float: left;
+        	display: inline-block;
+        	list-style: none;
+        	margin-left: 15px;
+        	width: 73px;
+        	height: 30px;
+        	background-color:#EEEDF2;
+        	line-height: 30px;
+        	text-align: center;
+        	border-radius: 3px 3px 0 0;
+        	margin-top: 15px;
+            border:1px solid #CBCBCB;
+            border-bottom: none;
+  /*          border-bottom: 1px solid #*/
+        }
+        #firp3 ul li:nth-child(1){
+        	float: left;
+        	display: inline-block;
+        	list-style: none;
+        	margin-left: 15px;
+        	width: 73px;
+        	height: 30px;
+        	background-color:#EEEDF2;
+        	line-height: 30px;
+        	text-align: center;
+        	border-radius: 3px 3px 0 0;
+        	margin-top: 15px;
+            border:1px solid #CBCBCB;
+            border-bottom: none;
+            background-color:white;
+        }
+        #firp4{
+        	width:470px;
+            height: 280px;
+            border:1px solid #CBCBCB;
+   /*         background-color: red;*/
+            display: inline-block;
+            margin-left: 15px;
+            border-radius: 0 5px 5px 5px;
+            border:1px solid #CBCBCB;
+/*            border-top: none;*/
+       /*     margin-top:105px;*/
+        }
+       #table1,#table1 tr td{
+        	border-collapse: collapse;
+        	border:1px solid #E6E6E6;
+        	color:#606165;
+        }
+        #table1{
+        	margin-top: 30px;
+        	margin-left: 15px;
+        }
+        #table1 tr td{
+              width: 100px;
+              height: 35px;
+              padding-left: 8px;
+              line-height: 30px;
+              font-family: "宋体";
+            /*  font-weight: bold;*/
+        }
+        #table-color{
+          background-color:#F4F5F7;
+        }
+        #secp{
+        	background-color:white;
+        }
+        #secp2{
+        	width: 350px;
+        	height: 60px;
+        	background-color: #F4F5F7;
+        	border-radius: 5px;
+
+        }   
+        #firstdiv{
+        	width: 250px;
+        	height: 45px;
+        	border-bottom: 1px solid #DADADA;
+        	margin: 10px 0 0 30px;
+        	padding-left:15px;
+        }
+        #firstdiv span:nth-child(1){
+        	color:#CFCFCF;
+        }
+        #tb{
+        	border-collapse: collapse;
+        	width:320px;
+        	height: 250px;
+/*        	margin-left: 30px;*/
+        	border:1px solid white;
+        	margin:0 0 0 30px;
+        }
+        #tb tr td{
+			    border-right:1px solid #DADADA;
+			    border-bottom:1px solid #DADADA;
+				border-top: 0;
+				border-bottom: 0;
+				padding-left:15px;
+      /*  	border:1px solid ##DADADA;*/
+        }
+        #tb tr:nth-child(1){
+        border-top: none;
+ /*       height: 45px;*/
+        }
+        .col{
+        	color:#CFCFCF;
+
+        }
+        
+        .pos{
+   /*     	display: inline-block;*/
+        	position:absolute;
+     	    top:0; 
+        }
+        .pos2{
+   /*     	display: inline-block;*/
+        	position:absolute;
+     	    top:20px; 
+        }
+        #btn{
+        	border:none;
+        	display: inline-block;
+        	background-color:#388BC1;
+        	border-radius: 3px;
+        	width: 50px;
+        	height: 25px;
+        	color: white;
+        	margin-left: 115px;
+        	cursor: pointer;
+        }
+        #xt{
+        	    border-right:0;
+			    border-bottom:1px solid #DADADA;
+				border-top: 1px solid #DADADA;
+				border-left: 0;
+				height: 150px;
+        }
+        #secp2 span{
+        	color:#dadada;
+        	margin:15px 0 0 30px;
+        }
+        #secp6 span{
+        	color:#dadada;
+        	margin:15px 0 0 30px;
+        }
+        #xiangmu2{
+        	width:880px;
+        	height: 440px;
+     /*       border:1px solid red;*/
+            margin-top: 30px;
+            display: inline-block;
+        }
+        #firp8{
+        	width: 350px;
+        	height: 439px;
+        	border:1px solid #CFD0D4;
+        	display: inline-block;
+        	border-radius: 5px;
+        }
+        #secp5{
+        	width:500px;
+        	height: 439px;
+        	border:1px solid #CFD0D4;
+        	float: right;
+            border-radius: 5px;
+        }
+        #firp9{
+        	width: 350px;
+        	height: 60px;
+        	background-color: #F4F5F7;
+        	border-radius: 5px;
+        }
+        #firp9 span{
+        	color: #AFAFAF;
+            display: inline-block;
+            margin-top: 15px;
+            margin-left: 25px;
+        }
+        #firp0{
+        	width:350px;
+        	height:378px;
+        	background-color: white;
+        }
+        #secp6{
+        	width: 500px;
+        	height: 60px;
+        	background-color: #F4F5F7;
+        	border-radius: 5px;
+
+        }  
+        #table3{
+        	width: 460px;
+        	height:330px;
+        	border:1px solid #CBCBCB;
+        	border-collapse: collapse;
+        	background-color:white;
+        	margin: 30px 0 0 30px;
+        }
+        #table3 tr td{
+        	border:1px solid #CBCBCB;
+        }
+   /*     #table tr td:nth-child(1){
+        	border-bottom:0;
+        }*/
+        #table3 tr td:nth-child(1),#table3 tr td:nth-child(2){
+        	text-align: center;
+        }
+        #table3 tr td:nth-child(3){
+        	padding-left: 15px;
+        	width:270px;
+        }
+        #table3 tr:hover{
+        	cursor:pointer;
+        	background-color: #F4F5F7;
+        }
+        #table3 img{
+        	margin-left:10px;
+        }
+        #se{
+        	width: 325px;
+        	height: 35px;
+/*        	background-color:red;*/
+        	margin-left:25px;
+        	border:none;
+        	border-bottom: 2px solid #A8CFEC;
+        }
+        #se form select:nth-child(2){
+        	width: 90px;
+        }
+        #se form select{
+        	margin-right: 5px;
+        }
+        #return-btn,#se form{
+         display: inline-block;
+        }
+        #return-btn{
+        	border:1px solid #CBCBCB;
+        	background-color:white;
+        	padding-left:2px;
+        }
+        #week{
+        	width: 325px;
+        	height: 35px;
+      /*  	background-color:red;*/
+        	margin-left:25px;
+        	border:none;
+        	border-bottom: 2px solid #E1E1E1;
+        }
+        #week span{
+        	display: inline-block;
+        /*	margin-left:15px;*/
+        	width: 45px;
+        	height: 35px;
+        	line-height:35px;
+        	cursor:pointer;
+        }
+         #dates{
+         	margin-left:15px;
+            cursor: pointer;
+         }
+	</style>
+</head>
+<body>
+	<div id="header"><img src="header.jpg" alt="" id="header-img"><div id="sub"><div id="search"><img src="search.jpg" alt=""></div><img src="sign-in.jpg" alt="" id="sign-in"></div></div>
+	<div id="container">
+		<div id="left"><img src="task.jpg" alt=""></div>
+		<div id="Right">
+			<div id="imagine"><img src="infor.jpg" alt=""></div>
+				<div id="right">
+				     <div id="select">
+				     <form action="">
+				     	<div id="first"><span>查询项&nbsp;&nbsp;&nbsp;</span>
+				     	<select name="choose" id="choose">
+				     		<option value="1">&nbsp;第一项&nbsp;</option>
+				     		<option value="2">&nbsp;第二项&nbsp;</option>
+				     		<option value="3">&nbsp;第三项&nbsp;</option>
+				     	</select>
+				     	</div>
+						<div id="second"><div id="second-1">
+						    <span>买方&nbsp;&nbsp;&nbsp;</span>
+						        <select name="choose" id="choose">
+									     		<option value="1">&nbsp;小A</option>
+									     		<option value="2">&nbsp;小B</option>
+									     		<option value="3">&nbsp;小C</option>
+								</select>
+									     	</div>
+						<div id="second-2"><span>卖方&nbsp;&nbsp;&nbsp;</span>
+							    <select name="choose" id="choose">
+							     		<option value="1">&nbsp;小C</option>
+							     		<option value="2">&nbsp;小B</option>
+							     		<option value="3">&nbsp;小A</option>
+							    </select>
+						</div>
+				     <img src="huan.jpg" alt="">
+				     </div>
+			     	<div id="third">
+			     		<span>日期</span>
+			     		<div id="sec">2016-04-01</div>
+			     	</div>
+			     	<div id="time"><span>总耗时</span><div id="sec1"><select name="sec1" id=""><option value="1">&nbsp;8天</option><option value="2">&nbsp;9天</option><option value="3">&nbsp;10天</option></select></div></div>
+			     	<div id="renshu"><span>人数</span>
+			     		<div id="sec"><select name="sec1" id=""><option value="1">&nbsp;10人</option><option value="2">&nbsp;9人</option><option value="3">&nbsp;8人</option></select></div>
+			     	</div>
+			     	<div id="chengjiao">
+			     		<span>成交项</span>
+			     		<div id="sec2"><select name="sec1" id=""><option value="1">&nbsp;10项</option><option value="2">&nbsp;9项</option><option value="3">&nbsp;8项</option></select></div>
+			     	</div>
+			     	<input type="button" value="搜索" id="btn1" />
+			     </form>
+			     </div>
+			     <div id="con">
+			    <div id="smacon">
+			     <div class="img"><img src="leftimg.jpg" alt=""></div>
+			      <div class="sma"><span id="small"></span><span>10:00 am</span></br><span>￥</span><span>1200</span></div>
+			      <div class="sma"><span></span><span>11:00 am</span></br><span>￥</span><span>1300</span></div>
+			      <div class="sma"><span></span><span>12:00 am</span></br><span>￥</span><span>1200</span></div>
+			      <div class="sma"><span></span><span>01:00 am</span></br><span>￥</span><span>1400</span></div>
+			      <div class="sma"><span></span><span>02:00 am</span></br><span>￥</span><span>1500</span></div>
+			      <div class="sma"><span></span></span><span>03:00 am</span></br><span>￥</span><span>1800</span></div>
+			      <div class="img rightimg"><img src="rightimg.jpg" alt=""></div>
+			      <div class="chaxun"><img src="chaxun.jpg" alt="">
+			      </div>
+			      </div>
+                  <span id="spa">2016年4月份统计</span>
+                  <div id="suc">
+                  <div class="suc1"><span></span><span>133311</span><span>成交量</span><span></span></div>
+                  <div class="suc2 suc1"><span></span><span>133311</span><span>成交量</span><span></span></div>
+                  <div class="suc3 suc1"><span></span><span>133311</span><span>成交量</span><span></span></div>
+                  <div class="suc4 suc1"><span></span><span>133311</span><span>成交量</span><span></span></div></div>
+                  <div id="xiangmu">
+                  	<div id="firp"><div id="firp2"><span>第一组项目</span></div><div id="firp3"><ul>
+                  		<li>项目一</li>
+                  		<li>项目二</li>
+                  		<li>项目三</li>
+                  		<li>项目四</li>
+                  		<li>项目五</li>
+                  	</ul>
+                  	<div id="firp4"><table border="1" id="table1">
+                  	<tr>
+                  		<td id="table-color">购买材料一</td>
+                  		<td>购买材料一</td>
+                  		<td>购买材料一</td>
+                  		<td>购买材料一</td>
+                  	</tr>
+                  	<tr>
+                  		<td>购买材料二</td>
+                  		<td>购买材料二</td>
+                  		<td>购买材料二</td>
+                  		<td>购买材料二</td>
+                  	</tr>
+                  	<tr>
+                  		<td>购买材料四</td>
+                  		<td>购买材料四</td>
+                  		<td>购买材料四</td>
+                  		<td>购买材料四</td>
+                  	</tr>
+                  	<tr>
+                  		<td>购买材料六</td>
+                  		<td>购买材料六</td>
+                  		<td>购买材料六</td>
+                  		<td>购买材料六</td>
+                  	</tr>
+                  		<tr>
+                  		<td>购买材料十三</td>
+                  		<td>购买材料十三</td>
+                  		<td>购买材料十三</td>
+                  		<td>购买材料十三</td>
+                  	</tr>
+	                <tr>
+                  		<td>购买材料二十</td>
+                  		<td>购买材料二十</td>
+                  		<td>购买材料二十</td>
+                  		<td>购买材料二十</td>
+                  	</tr>
+                  	</table></div></div>
+                  	</div>
+                  	<div id="secp">
+                  	   <div id="secp2"><span>第一组项目</span></div>
+                  	   <div id="firstdiv">
+                  	      <span class="col">标题</span></br><span>项目报表三</span>
+                  	    </div>
+                  	    <table border="1" id="tb">
+                  	    <tr>
+                  	    	<td style="width:100px;height:45px"><span class="col">价格</span></br><span>￥158</span></td>
+                  	    	<td><span class="col">负责人</span></br><span>小A</span></td>
+                  	    </tr><tr id="xt">
+                  	    	<td colspan="2" style="position:relative;"><span class="col pos">详细描述</span></br><span class="pos2">该项目目前负责人是……</span></td>
+                  	    </tr><tr>
+                  	    	<td colspan="2"><form action="">
+                  	    		<input type="checkbox" value="obey"><span class="col">&nbsp;&nbsp;遵守保密协议</span>
+                  	    		<input type="button" name="btn" value="搜索" id="btn" />
+                  	    	</form></td>
+                  	    </tr></table>
+                  	</div>
+                  	<div id="xiangmu2">
+                  	<div id="firp8"><div id="firp9"><span>日历</span></div><div id="firp0"><div id="se"><form action=""><select name="date" id="date"><option value="year">2016年</option><option value="year">2015年</option><option value="year">2014年</option></select><select name="month" id="month"><option value="month">4月</option><option value="month">4月</option><option value="month">4月</option></select><select name="biaozhu" id="biaozhu"><option value="biaozhu">标注日期</option><option value="biaozhu">标注日期</option><option value="biaozhu">标注日期</option></select></form><input type="button" value="返回今天" id="return-btn"></div>
+                    <div id="week"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+                    <img src="date.jpg" alt=""  id="dates">
+                  	</div>
+                  	</div>
+	                   <div id="secp5">
+                  	   <div id="secp6"><span>汽车行业品牌榜</span></div>
+                  	   <table border="1px" id="table3">
+                  	   	<tr>
+                  	   		<td>排名</td>
+                  	   		<td>品牌</td>
+                  	   		<td>搜索指数</td>
+                  	   	</tr> 	<tr>
+                  	   		<td>1</td>
+                  	   		<td>大众</td>
+                  	   		<td>48912001<img src="dazhong.jpg" alt=""></td>
+                  	   	</tr>
+                  	   	 	<tr>
+                  	   		<td>2</td>
+                  	   		<td>丰田</td>
+                  	   		<td>29307333<img src="fengtian.jpg" alt=""></td>
+                  	   	</tr>
+                  	   	 	<tr>
+                  	   		<td>3</td>
+                  	   		<td>奥迪</td>
+                  	   		<td>23139070<img src="aodi.jpg" alt=""></td>
+                  	   	</tr>
+
+                  	   	 	<tr>
+                  	   		<td>4</td>
+                  	   		<td>本田</td>
+                  	   		<td>22885564<img src="bentian.jpg" alt=""></td>
+                  	   	</tr>
+                  	   	 	<tr>
+                  	   		<td>5</td>
+                  	   		<td>福特</td>
+                  	   		<td>22324792<img src="fute.jpg" alt=""></td>
+                  	   	</tr>
+                  	   	 	<tr>
+                  	   		<td>6</td>
+                  	   		<td>宝马</td>
+                  	   		<td>21444077<img src="baoma.jpg" alt=""></td>
+                  	   	</tr>
+                  	   	 	<tr>
+                  	   		<td>7</td>
+                  	   		<td>现代</td>
+                  	   		<td>20114969<img src="xiandai.jpg" alt=""></td>
+                  	   	</tr>
+                  	   	 	<tr>
+                  	   		<td>8</td>
+                  	   		<td>起亚</td>
+                  	   		<td>19251680<img src="qiya.jpg" alt=""></td>
+                  	   	</tr>
+                  	   	 	<tr>
+                  	   		<td>9</td>
+                  	   		<td>奔驰</td>
+                  	   		<td>19172837<img src="benchi.jpg" alt=""></td>
+                  	   	</tr>
+                  	   	 	<tr>
+                  	   		<td>10</td>
+                  	   		<td>别克</td>
+                  	   		<td>18544027<img src="bieke.jpg" alt=""></td>
+                  	   	</tr>
+                  	   </table>
+                  	</div>
+                  </div>
+			    </div>
+			</div>
+		</div>
+
+	</div>
+	</div>
+</body>
+</html>
+<!-- <table border="1px" id="table2" style="width:300px;"><tr>
+                  		<td colspan="2" style="width:110px;">标题</br><span class="table-word">项目报表三</span></td>
+                  	</tr><tr>
+                  		<td style="width:110px;">价格</br><span class="table-word">￥158</span></td>
+                  		<td>负责人</br><span class="table-word">小A</span></td>
+                  	</tr><tr>
+                  		<td style="height:100px;position:relative;" colspan="2"><span id="table-p">详细描述</br><span class="table-word">该项目目前负责人是……</span></span></td>
+                  	</tr><tr>
+                  		<td colspan="2"><form><input type="checkbox" value="obey">遵守保密协议</option></form><input type="button" value="搜索"/></td>
+                  		<td></td>
+                  	</tr></table> -->
